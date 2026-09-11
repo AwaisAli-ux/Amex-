@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amex Medical Supplies | Quality DME & Personal Healthcare Products</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#172554',
+                        },
+                        tealBrand: {
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-900 text-slate-200 text-xs py-2.5 px-4 border-b border-brand-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-3 text-center sm:text-left">
+                <span><i class="fa-solid fa-truck-fast text-tealBrand-500 mr-1"></i> Supplying Patients (B2C) & Healthcare Facilities (B2B)</span>
+                <span class="hidden md:inline">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-shield-halved text-tealBrand-500 mr-1"></i> Quality Durable Medical Equipment (DME) Provider</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+14064792077" class="font-bold text-tealBrand-500 hover:underline"><i class="fa-solid fa-phone mr-1"></i> Call Us: +1 406 479 2077</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3">
+                    <div class="w-11 h-11 rounded-xl bg-brand-600 flex items-center justify-center text-white font-extrabold text-2xl shadow-md">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-black tracking-tight text-slate-900 block leading-none">AMEX <span class="text-brand-600">MEDICAL</span></span>
+                        <span class="text-[11px] font-semibold text-slate-500 tracking-wider block mt-0.5">DME SUPPLIES & CARE</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-700">
+                    <a href="#home" class="hover:text-brand-600 transition-colors">Home</a>
+                    <a href="#products" class="hover:text-brand-600 transition-colors">Products Catalog</a>
+                    <a href="#about" class="hover:text-brand-600 transition-colors">About Us</a>
+                    <a href="#contact" class="hover:text-brand-600 transition-colors">Order & Inquiry</a>
+                </nav>
+
+                <!-- Action Call -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold py-2.5 px-5 rounded-lg transition shadow-sm hover:shadow">
+                        <i class="fa-solid fa-paper-plane mr-1.5"></i> Request Order / Quote
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
+            <a href="#home" class="block py-2 text-slate-700 hover:text-brand-600">Home</a>
+            <a href="#products" class="block py-2 text-slate-700 hover:text-brand-600">Products Catalog</a>
+            <a href="#about" class="block py-2 text-slate-700 hover:text-brand-600">About Us</a>
+            <a href="#contact" class="block py-2 text-slate-700 hover:text-brand-600">Order & Inquiry</a>
+            <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
+                <span class="text-xs text-slate-500">Support Hotline: +1 406 479 2077</span>
+                <a href="#contact" class="bg-brand-600 text-white py-2 rounded-lg text-center font-bold text-xs">Request Order Info</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="bg-gradient-to-r from-slate-900 via-brand-900 to-slate-900 text-white py-14 lg:py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-5">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-400/30 text-brand-200 text-xs font-semibold">
+                        <i class="fa-solid fa-circle-check text-tealBrand-500"></i> Quality Durable Medical Equipment
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                        Essential Medical Supplies for Patients & Healthcare Providers
+                    </h1>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+                        Amex Medical Supplies provides top-quality mobility aids, supportive braces, orthopedic supports, and bath safety equipment. We serve direct retail patients (B2C) as well as clinics, care facilities, and institutions (B2B).
+                    </p>
+
+                    <!-- Notice Banner inside Hero -->
+                    <div class="bg-slate-800/90 border-l-4 border-brand-500 p-3.5 rounded-r-lg text-xs text-slate-300 space-y-1">
+                        <p class="font-bold text-white"><i class="fa-solid fa-info-circle text-brand-400 mr-1"></i> Simple & Fast Offline Ordering</p>
+                        <p>To ensure personal sizing assistance and accurate availability, we process orders directly through phone or our online inquiry form.</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="#products" class="bg-brand-600 hover:bg-brand-500 text-white font-bold px-5 py-3 rounded-lg shadow transition flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-wheelchair"></i> Browse Products
+                        </a>
+                        <a href="#contact" class="bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 font-semibold px-5 py-3 rounded-lg transition flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-envelope"></i> Contact Sales Team
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trust Summary Card -->
+                <div class="lg:col-span-5 bg-white text-slate-800 p-6 rounded-2xl shadow-xl space-y-4">
+                    <h3 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-heart-pulse text-brand-600"></i> Why Choose Amex Medical Supplies?
+                    </h3>
+
+                    <div class="space-y-3 text-xs">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Direct Patient Care (B2C)</h4>
+                                <p class="text-slate-500">Walkers, wheelchairs, and braces delivered directly to your door with simple ordering.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-building-user"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Bulk & Institutional Supply (B2B)</h4>
+                                <p class="text-slate-500">Discounted bulk pricing and fast invoicing for clinics, doctors, and care facilities.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-box-open"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Ready-To-Ship Inventory</h4>
+                                <p class="text-slate-500">Everyday, high-demand standard medical items in stock without complex delays.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+                        <span>Quality Medical Equipment</span>
+                        <span class="text-emerald-600 font-bold"><i class="fa-solid fa-circle-check"></i> Active Inventory</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DME Product Showcase Section -->
+    <section id="products" class="py-14 bg-slate-50 flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Catalog</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Our Everyday DME Products</h2>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-1">High-quality wheelchairs, braces, rollators, and bath safety equipment for homes & healthcare centers.</p>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 text-brand-800 text-xs px-3.5 py-2 rounded-lg shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-phone-volume text-brand-600"></i>
+                    <span><strong>Order Support:</strong> Call or click any item to request an order!</span>
+                </div>
+            </div>
+
+            <!-- Category Filters & Search -->
+            <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-200 mb-8 space-y-3 md:space-y-0 md:flex md:items-center md:justify-between gap-4">
+                <!-- Buttons -->
+                <div class="flex flex-wrap gap-1.5 text-xs font-medium text-slate-600" id="filter-buttons">
+                    <button onclick="filterProducts('all')" class="category-btn border-b-2 border-brand-600 text-brand-600 px-3 py-1.5 font-bold">All Products (12)</button>
+                    <button onclick="filterProducts('Mobility')" class="category-btn hover:text-brand-600 px-3 py-1.5">Mobility & Walkers</button>
+                    <button onclick="filterProducts('Braces')" class="category-btn hover:text-brand-600 px-3 py-1.5">Braces & Supports</button>
+                    <button onclick="filterProducts('Bath Safety')" class="category-btn hover:text-brand-600 px-3 py-1.5">Bath Safety</button>
+                    <button onclick="filterProducts('Daily Care')" class="category-btn hover:text-brand-600 px-3 py-1.5">Daily Care</button>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="relative min-w-[220px]">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                    <input type="text" id="search-input" onkeyup="searchProducts()" placeholder="Search equipment..." class="w-full pl-8 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500">
+                </div>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Rendered dynamically by JS below -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us & Business Info Section -->
+    <section id="about" class="py-14 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto space-y-4 text-center md:text-left">
+                <span class="text-xs font-bold text-brand-600 uppercase tracking-wider block text-center">About Amex Medical Supplies</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">Your Trusted Local & National DME Partner</h2>
+                <p class="text-slate-600 leading-relaxed text-xs sm:text-sm">
+                    At Amex Medical Supplies, we believe access to essential medical equipment should be seamless, affordable, and stress-free. We specialize in everyday Durable Medical Equipment (DME) designed to improve mobility, aid recovery, and enhance daily living safety.
+                </p>
+                <p class="text-slate-600 leading-relaxed text-xs sm:text-sm">
+                    Whether you are an individual caregiver needing a folding wheelchair for a loved one, or a medical clinic looking to purchase orthopedic braces in bulk, Amex Medical Supplies offers personal support, transparent pricing, and fast dispatch.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                    <div class="border border-slate-200 p-4 rounded-xl bg-slate-50 text-left">
+                        <i class="fa-solid fa-user-nurse text-brand-600 text-xl mb-2"></i>
+                        <h4 class="font-bold text-slate-900 text-sm">B2C Individual Support</h4>
+                        <p class="text-xs text-slate-500 mt-1">Friendly customer service to help select the correct product, size, and fit for home care.</p>
+                    </div>
+                    <div class="border border-slate-200 p-4 rounded-xl bg-slate-50 text-left">
+                        <i class="fa-solid fa-boxes-stacked text-brand-600 text-xl mb-2"></i>
+                        <h4 class="font-bold text-slate-900 text-sm">B2B Wholesale Orders</h4>
+                        <p class="text-xs text-slate-500 mt-1">Streamlined bulk pricing and direct invoices for clinics, hospitals, and nursing homes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Order Inquiry Section -->
+    <section id="contact" class="py-14 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-md border border-slate-200 p-6 sm:p-8">
+                <div class="text-center mb-6">
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Fast Response</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900 mt-1">Request Product Information or Order Quote</h2>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-1">Fill out the form below or call us directly. Our team will verify stock and reply promptly with price details.</p>
+                </div>
+
+                <form id="contact-form" class="space-y-4">
+                    <!-- FormSubmit hidden fields -->
+                    <input type="hidden" name="_subject" value="New Order Inquiry - Amex Medical Supplies">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                            <input type="text" name="Full Name" required placeholder="John Doe" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                            <input type="tel" name="Phone Number" required placeholder="(555) 000-0000" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                            <input type="email" name="email" required placeholder="name@example.com" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Customer Type *</label>
+                            <select name="Customer Type" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500 text-slate-700">
+                                <option value="B2C">Individual Patient / Family (B2C)</option>
+                                <option value="B2B">Healthcare Facility / Provider (B2B)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Interested Product or Requirements</label>
+                        <input type="text" name="Interested Product" id="form-product-input" placeholder="e.g. Folding Wheelchair, Knee Brace, Bath Bench..." class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Message / Quantity / Special Requests</label>
+                        <textarea name="Message" rows="3" required placeholder="Let us know how many units you need or ask any questions regarding sizing..." class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500"></textarea>
+                    </div>
+
+                    <!-- Success / Error messages -->
+                    <div id="contact-form-success" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs px-4 py-3 rounded-lg text-center font-semibold">
+                        <i class="fa-solid fa-circle-check mr-1"></i> Thank you! Your order inquiry has been received. We will contact you shortly.
+                    </div>
+                    <div id="contact-form-error" class="hidden bg-red-50 border border-red-200 text-red-700 text-xs px-4 py-3 rounded-lg text-center font-semibold">
+                        <i class="fa-solid fa-triangle-exclamation mr-1"></i> Something went wrong. Please try again or call us directly.
+                    </div>
+
+                    <button type="submit" id="contact-form-btn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-lg shadow transition text-xs">
+                        Submit Order Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Col 1 -->
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-7 h-7 rounded bg-brand-600 flex items-center justify-center text-white font-bold text-sm">
+                            <i class="fa-solid fa-notes-medical"></i>
+                        </div>
+                        <span class="text-base font-black text-white tracking-tight">AMEX MEDICAL SUPPLIES</span>
+                    </div>
+                    <p class="leading-relaxed text-slate-400">
+                        Providing durable medical equipment, mobility aids, and orthopedic bracing solutions to direct consumers and healthcare institutions.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="space-y-2">
+                    <h4 class="text-slate-200 font-bold text-xs uppercase tracking-wider">Contact Info</h4>
+                    <p><i class="fa-solid fa-location-dot mr-1.5 text-brand-500"></i> 1001 S MAIN ST STE 500, KALISPELL, MT 59901</p>
+                    <p><i class="fa-solid fa-phone mr-1.5 text-brand-500"></i> Phone: +1 406 479 2077</p>
+                    <p><i class="fa-solid fa-envelope mr-1.5 text-brand-500"></i> Email: amexmedical413@gmail.com</p>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="space-y-2">
+                    <h4 class="text-slate-200 font-bold text-xs uppercase tracking-wider">Business Notice</h4>
+                    <p class="leading-relaxed text-slate-400">
+                        Amex Medical Supplies processes orders via phone, email, and direct pro-forma invoicing. We accept both individual retail and wholesale business inquiries.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800 text-center text-slate-500">
+                <p>&copy; 2026 Amex Medical Supplies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Product Quote Modal -->
+    <div id="quote-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 relative border border-slate-200">
+            <!-- Close Button -->
+            <button onclick="closeQuoteModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg p-1">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-4">
+                <span class="text-[10px] font-bold text-brand-600 uppercase tracking-wider">Inquire or Order</span>
+                <h3 id="modal-product-title" class="text-lg font-bold text-slate-900 mt-0.5">Product Title</h3>
+                <p id="modal-product-code" class="text-xs text-slate-500 font-mono">HCPCS: -</p>
+            </div>
+
+            <form id="modal-form" class="space-y-3">
+                <input type="hidden" name="_subject" value="Product Quote Request - Amex Medical Supplies">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="Product" id="modal-product-name-hidden">
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name *</label>
+                    <input type="text" name="Full Name" required placeholder="Jane Smith" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500">
+                </div>
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Phone *</label>
+                        <input type="tel" name="Phone Number" required placeholder="(555) 000-0000" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Quantity *</label>
+                        <input type="number" name="Quantity" min="1" value="1" required class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                    <input type="email" name="email" required placeholder="jane@example.com" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Order Notes (Sizing / Delivery address)</label>
+                    <textarea name="Order Notes" rows="2" placeholder="Provide any details on preferred size or delivery state..." class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:border-brand-500"></textarea>
+                </div>
+
+                <!-- Success / Error messages -->
+                <div id="modal-form-success" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs px-4 py-3 rounded-lg text-center font-semibold">
+                    <i class="fa-solid fa-circle-check mr-1"></i> Inquiry Sent! Our team will contact you with availability and price confirmation.
+                </div>
+                <div id="modal-form-error" class="hidden bg-red-50 border border-red-200 text-red-700 text-xs px-4 py-3 rounded-lg text-center font-semibold">
+                    <i class="fa-solid fa-triangle-exclamation mr-1"></i> Something went wrong. Please try again or call us directly.
+                </div>
+
+                <div class="pt-1">
+                    <button type="submit" id="modal-form-btn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 rounded-lg text-xs transition shadow">
+                        Send Order Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Code -->
+    <script>
+        const FORMSUBMIT_URL = "https://formsubmit.co/ajax/amexmedical413@gmail.com";
+
+        // Array of 12 Low-Friction DME Products with Standard US Market Retail Prices
+        const dmeProducts = [
+            {
+                id: 1,
+                name: "Standard Folding Manual Wheelchair",
+                category: "Mobility",
+                hcpcs: "K0001",
+                price: "$189.00",
+                image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=500&q=80",
+                desc: "Durable steel frame with push handles and swing-away footrests. Easy fold for transport."
+            },
+            {
+                id: 2,
+                name: "Lightweight Aluminum Transport Chair",
+                category: "Mobility",
+                hcpcs: "E1038",
+                price: "$149.00",
+                image: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=500&q=80",
+                desc: "Compact 19 lb transport wheelchair ideal for quick travel and patient escort."
+            },
+            {
+                id: 3,
+                name: "4-Wheel Rollator Walker with Seat",
+                category: "Mobility",
+                hcpcs: "E0143",
+                price: "$79.00",
+                image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=500&q=80",
+                desc: "Height-adjustable padded seat, lockable hand brakes, and under-seat storage pouch."
+            },
+            {
+                id: 4,
+                name: "Adjustable Hinge Knee Support Brace",
+                category: "Braces",
+                hcpcs: "L1812",
+                price: "$45.00",
+                image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=500&q=80",
+                desc: "Dual bilateral aluminum hinges providing lateral stability for sprains or post-op support."
+            },
+            {
+                id: 5,
+                name: "Rigid Ankle Stabilizer Brace",
+                category: "Braces",
+                hcpcs: "L1902",
+                price: "$24.00",
+                image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=500&q=80",
+                desc: "Contoured side shells for ankle protection during recovery from sprains or strain."
+            },
+            {
+                id: 6,
+                name: "Ergonomic Wrist Splint & Brace",
+                category: "Braces",
+                hcpcs: "L3908",
+                price: "$19.00",
+                image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=500&q=80",
+                desc: "Breathable fabric with removable palmar stay for carpal tunnel and wrist support."
+            },
+            {
+                id: 7,
+                name: "Adjustable Aluminum Walking Cane",
+                category: "Mobility",
+                hcpcs: "E0100",
+                price: "$22.00",
+                image: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=500&q=80",
+                desc: "Ergonomic soft-grip offset handle with non-slip rubber tip and push-button height adjustment."
+            },
+            {
+                id: 8,
+                name: "Medical Bath & Shower Bench",
+                category: "Bath Safety",
+                hcpcs: "E0240",
+                price: "$42.00",
+                image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=500&q=80",
+                desc: "Corrosion-proof aluminum legs with drainage holes and non-slip rubber feet for shower safety."
+            },
+            {
+                id: 9,
+                name: "Padded Bath Stool without Backrest",
+                category: "Bath Safety",
+                hcpcs: "E0240",
+                price: "$38.00",
+                image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500&q=80",
+                desc: "Compact round stool designed to fit small tubs and shower stalls comfortably."
+            },
+            {
+                id: 10,
+                name: "Suction Grab Bar for Bathroom",
+                category: "Bath Safety",
+                hcpcs: "E0241",
+                price: "$18.00",
+                image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=500&q=80",
+                desc: "Heavy-duty suction cup grab bar providing extra stability near tubs and toilets."
+            },
+            {
+                id: 11,
+                name: "Graduated Compression Socks (20-30 mmHg)",
+                category: "Daily Care",
+                hcpcs: "A6530",
+                price: "$26.00",
+                image: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1cdb?auto=format&fit=crop&w=500&q=80",
+                desc: "Promotes leg circulation, reduces swelling, and relieves fatigue for daily wear."
+            },
+            {
+                id: 12,
+                name: "Foam Bed Wedge Positioning Cushion",
+                category: "Daily Care",
+                hcpcs: "E0190",
+                price: "$39.00",
+                image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500&q=80",
+                desc: "High-density foam incline cushion to relieve acid reflux, leg elevation, and respiratory discomfort."
+            }
+        ];
+
+        let currentFilteredProducts = [...dmeProducts];
+
+        // Render Product Cards
+        function renderProducts(products) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            if (products.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-10 text-center text-slate-500">
+                        <i class="fa-solid fa-box-open text-3xl mb-2 text-slate-300"></i>
+                        <p class="text-sm font-semibold">No equipment found matching your search.</p>
+                        <p class="text-xs mt-0.5">Please try another term or filter.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-44 bg-slate-100 overflow-hidden">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover object-center" onerror="this.src='https://placehold.co/500x350/1e293b/ffffff?text=${encodeURIComponent(product.name)}'">
+                            <span class="absolute top-2.5 left-2.5 bg-slate-900/80 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">
+                                ${product.category}
+                            </span>
+                            <span class="absolute top-2.5 right-2.5 bg-brand-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded">
+                                HCPCS: ${product.hcpcs}
+                            </span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-slate-900 text-sm leading-snug mb-1">${product.name}</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3 line-clamp-2">${product.desc}</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0 mt-auto">
+                        <div class="my-2 flex items-center justify-between border-t border-slate-100 pt-2.5">
+                            <span class="text-xs font-extrabold text-brand-700">${product.price}</span>
+                            <span class="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold px-2 py-0.5 rounded">In Stock</span>
+                        </div>
+                        <button onclick="openProductQuoteModal(${product.id})" class="w-full bg-slate-900 hover:bg-brand-600 text-white font-bold py-2 px-3 rounded-lg text-xs transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-paper-plane"></i> Request Order / Info
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Category Filter
+        function filterProducts(category) {
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-b-2', 'border-brand-600', 'text-brand-600', 'font-bold');
+            });
+            event.target.classList.add('border-b-2', 'border-brand-600', 'text-brand-600', 'font-bold');
+
+            if (category === 'all') {
+                currentFilteredProducts = [...dmeProducts];
+            } else {
+                currentFilteredProducts = dmeProducts.filter(p => p.category === category);
+            }
+            renderProducts(currentFilteredProducts);
+        }
+
+        // Search Input
+        function searchProducts() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filtered = currentFilteredProducts.filter(p =>
+                p.name.toLowerCase().includes(query) ||
+                p.hcpcs.toLowerCase().includes(query) ||
+                p.category.toLowerCase().includes(query)
+            );
+            renderProducts(filtered);
+        }
+
+        // Open Modal
+        function openProductQuoteModal(productId) {
+            const product = dmeProducts.find(p => p.id === productId);
+            if (!product) return;
+
+            document.getElementById('modal-product-title').innerText = product.name;
+            document.getElementById('modal-product-code').innerText = `HCPCS: ${product.hcpcs} | Price Range: ${product.price}`;
+            document.getElementById('modal-product-name-hidden').value = product.name;
+
+            // Reset modal form state
+            document.getElementById('modal-form').reset();
+            document.getElementById('modal-product-name-hidden').value = product.name;
+            document.getElementById('modal-form-success').classList.add('hidden');
+            document.getElementById('modal-form-error').classList.add('hidden');
+            document.getElementById('modal-form-btn').disabled = false;
+            document.getElementById('modal-form-btn').textContent = 'Send Order Inquiry';
+
+            document.getElementById('quote-modal').classList.remove('hidden');
+        }
+
+        // Close Modal
+        function closeQuoteModal() {
+            document.getElementById('quote-modal').classList.add('hidden');
+        }
+
+        // Helper: collect form data as JSON object
+        function formToJSON(form) {
+            const data = {};
+            new FormData(form).forEach((value, key) => {
+                if (!key.startsWith('_')) data[key] = value;
+            });
+            return data;
+        }
+
+        // Main Contact Form Submit via FormSubmit AJAX
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const btn = document.getElementById('contact-form-btn');
+            const successMsg = document.getElementById('contact-form-success');
+            const errorMsg = document.getElementById('contact-form-error');
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+
+            fetch(FORMSUBMIT_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formToJSON(this))
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success === 'true' || data.success === true) {
+                    successMsg.classList.remove('hidden');
+                    this.reset();
+                    btn.textContent = 'Submitted!';
+                } else {
+                    throw new Error('Submission failed');
+                }
+            })
+            .catch(() => {
+                errorMsg.classList.remove('hidden');
+                btn.disabled = false;
+                btn.textContent = 'Submit Order Inquiry';
+            });
+        });
+
+        // Modal Form Submit via FormSubmit AJAX
+        document.getElementById('modal-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const btn = document.getElementById('modal-form-btn');
+            const successMsg = document.getElementById('modal-form-success');
+            const errorMsg = document.getElementById('modal-form-error');
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+
+            fetch(FORMSUBMIT_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formToJSON(this))
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success === 'true' || data.success === true) {
+                    successMsg.classList.remove('hidden');
+                    btn.textContent = 'Sent!';
+                    setTimeout(() => closeQuoteModal(), 2500);
+                } else {
+                    throw new Error('Submission failed');
+                }
+            })
+            .catch(() => {
+                errorMsg.classList.remove('hidden');
+                btn.disabled = false;
+                btn.textContent = 'Send Order Inquiry';
+            });
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Initialize Products
+        window.onload = function() {
+            renderProducts(dmeProducts);
+        };
+    </script>
+</body>
+</html>
