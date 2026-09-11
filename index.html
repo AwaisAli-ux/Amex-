@@ -645,7 +645,7 @@
         function formToJSON(form) {
             const data = {};
             new FormData(form).forEach((value, key) => {
-                if (!key.startsWith('_')) data[key] = value;
+                data[key] = value;
             });
             return data;
         }
